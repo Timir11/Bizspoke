@@ -143,9 +143,9 @@ a:hover{
     letter-spacing: 3px;
     padding: 8px 10px;
 }
-.nav-item:hover .nav-link{
+/*.nav-item:hover .nav-link{
     color: #8167a9 !important;
-}
+}*/
 .nav-item.active .nav-link{
     color: #777 !important;
 }
@@ -435,6 +435,9 @@ a:hover{
 .contact{
     padding: 137px 85px;
 }
+.contact > iframe{
+    display: none;
+}
 .contact .contact-detail{
     text-align: center;
 }
@@ -470,7 +473,7 @@ a:hover{
     display: inline-block;
 }
 .footer{
-    padding: 125px 245px;
+    padding: 125px 30px;
     text-align: center;
 }
 .footer .footer-menu ul{
@@ -494,6 +497,7 @@ a:hover{
 }
 .recent_exp {
     padding: 0px 50px 50px;
+    overflow: hidden;
 }
 .recent_exp .title{
     padding: 64px 0px;
@@ -542,4 +546,42 @@ a:hover{
     left: 0;
     top: 0;
     border-radius: 103px 103px 0px 0px;
+}
+.modal-dialog{
+    max-width: 70%;
+    margin: 1.75rem auto;
+}
+.modal-content{
+    background: #000;
+    color: #fff;
+}
+.modal-backdrop{
+    background: #fff
+}
+.modal-header{
+    justify-content: center;
+    border: none;
+}
+.modal-header h4{
+    font-family: 'Olivera';
+    color: #E6D194;
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+.modal-body{
+    border: none;
+}
+.modal-body p{
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 24px;
+}
+.modal-footer{
+    border: none;
+    justify-content: center;
+}
+.modal-footer a{
+    color: #fff;
+    margin-bottom: 15px;
+    text-decoration: underline;
 }

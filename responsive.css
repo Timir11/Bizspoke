@@ -193,6 +193,7 @@
 	}
 	.contact > iframe{
 		margin-top: 40px;
+		display: block;
 	}
 	.footer {
     	padding: 40px 38px;
@@ -257,5 +258,18 @@
 	.recent_exp .img.reverse p{
 	    left: auto;
 	    right: -50px;
+	}
+}
+@media screen and (max-width: 575px){
+	.modal-dialog {
+	    max-width: 90%;
+	    margin: 1.75rem auto;
+	}
+	.modal-header h4{
+		font-size: 24px;
+	}
+	.modal-body p{
+		font-size: 12px;
+		line-height: 16px;
 	}
 }
