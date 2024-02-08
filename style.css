@@ -1,0 +1,545 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+    font-family: 'AL_Nevrada_PersonalUseOnly';
+    src: url('../fonts/AL_Nevrada_PersonalUseOnly.eot');
+    src: url('../fonts/AL_Nevrada_PersonalUseOnly.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AL_Nevrada_PersonalUseOnly.woff2') format('woff2'),
+        url('../fonts/AL_Nevrada_PersonalUseOnly.woff') format('woff'),
+        url('../fonts/AL_Nevrada_PersonalUseOnly.ttf') format('truetype'),
+        url('../fonts/AL_Nevrada_PersonalUseOnly.svg#AL_Nevrada_PersonalUseOnly') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Olivera';
+    src: url('../fonts/Olivera.eot');
+    src: url('../fonts/Olivera.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Olivera.woff2') format('woff2'),
+        url('../fonts/Olivera.woff') format('woff'),
+        url('../fonts/Olivera.ttf') format('truetype'),
+        url('../fonts/Olivera.svg#Olivera') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Brittany Signature';
+    src: url('../fonts/BrittanySignatureRegular.eot');
+    src: url('../fonts/BrittanySignatureRegular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BrittanySignatureRegular.woff2') format('woff2'),
+        url('../fonts/BrittanySignatureRegular.woff') format('woff'),
+        url('../fonts/BrittanySignatureRegular.ttf') format('truetype'),
+        url('../fonts/BrittanySignatureRegular.svg#BrittanySignatureRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+body{
+    margin: 0;
+    background: #000;
+    font-family: 'Poppins',sans-serif;
+}
+img{
+    max-width: 100%;
+}
+a:hover{
+    text-decoration: none;
+}
+
+/* #Navigation
+================================================== */
+
+.start-header {
+    opacity: 1;
+    transform: translateY(0);
+    padding: 20px 0;
+    box-shadow: 0 10px 30px 0 rgba(138, 155, 165, 0.15);
+    -webkit-transition : all 0.3s ease-out;
+    transition : all 0.3s ease-out;
+}
+.start-header.scroll-on {
+    box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
+    padding: 10px 0;
+    -webkit-transition : all 0.3s ease-out;
+    transition : all 0.3s ease-out;
+}
+.start-header.scroll-on .navbar-brand img{
+    height: 24px;
+    -webkit-transition : all 0.3s ease-out;
+    transition : all 0.3s ease-out;
+}
+.navigation-wrap{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    -webkit-transition : all 0.3s ease-out;
+    transition : all 0.3s ease-out;
+    background: #000;
+}
+.navbar{
+    padding: 0;
+}
+.navbar-brand img{
+    height: 38px;
+    width: auto;
+    display: block;
+    /*filter: brightness(10%);
+    -webkit-transition : all 0.3s ease-out;
+    transition : all 0.3s ease-out;*/
+}
+.navbar-toggler {
+    float: right;
+    border: none;
+    padding-right: 0;
+}
+.navbar-toggler:active,
+.navbar-toggler:focus {
+    outline: none;
+}
+.navbar-toggler-icon {
+    width: 24px;
+    height: 17px;
+    background-image: none;
+    position: relative;
+    border-bottom: 1px solid #fff;
+    transition: all 300ms linear;
+}
+.navbar-toggler-icon:after, 
+.navbar-toggler-icon:before{
+    width: 24px;
+    position: absolute;
+    height: 1px;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    content: '';
+    z-index: 2;
+    transition: all 300ms linear;
+}
+.navbar-toggler-icon:after{
+    top: 8px;
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+    transform: rotate(45deg);
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+    transform: translateY(8px) rotate(-45deg);
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    border-color: transparent;
+}
+.nav-link{
+    color: #fff !important;
+    font-weight: 300;
+    transition: all 200ms linear;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 3px;
+    padding: 8px 10px;
+}
+.nav-item:hover .nav-link{
+    color: #8167a9 !important;
+}
+.nav-item.active .nav-link{
+    color: #777 !important;
+}
+.nav-item{
+    position: relative;
+    transition: all 200ms linear;
+    margin-left: 48px;
+}
+.navbar-nav .nav-link.btn-style{
+    background: rgba(0,0,0,0.2);
+    border: 1px solid #C6AC62;
+    color: #C6AC62 !important;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 10px 21px !important;
+    border-radius: 4px;
+    display: block;
+}
+.banner{
+    position: relative;
+}
+.banner .banner-img img,
+.banner .banner-img video{
+    width: 100%;
+}
+
+.banner .banner-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner .banner-content h2{
+    text-align: center;
+    color: #C6AC62;
+    background: linear-gradient(91.5deg, #FED761 0.27%, #FEE59D 55.17%, #FED864 102.9%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 80px;
+    line-height: 110px;
+    letter-spacing: 2px;
+    font-family: 'AL_Nevrada_PersonalUseOnly';
+    text-transform: uppercase;
+    font-weight: normal;
+}
+.banner .banner-content h2 span{
+    color: #fff;
+    background: linear-gradient(91.5deg, #fff 0.27%, #fff 55.17%, #fff 102.9%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+    line-height: 110px;
+}
+.banner .arrow{
+    position: absolute;
+    bottom: 90px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+.zigzag .zigzag-item .content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+    padding: 0 109px;
+}
+.zigzag .zigzag-item .content h3{
+    font-size: 40px;
+    font-family: Olivera;
+    color: #E6D194;
+    line-height: 38px;
+    margin-bottom: 42px;
+    text-transform: uppercase;
+}
+.zigzag .zigzag-item .content p,
+.zigzag .zigzag-item .content ul li {
+    font-size: 24px;
+    line-height: 36px;
+    margin: 0;
+    font-weight: 400;
+}
+.zigzag .zigzag-item .content ul li {
+    text-align: left;
+}
+.zigzag .zigzag-item img{
+    width: 100%;
+}
+.img-with-txt{
+    position: relative;
+}
+.img-with-txt .bgimg img{
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+.img-with-txt .txt{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+.img-with-txt .txt p{
+    font-size: 24px;
+    line-height: 36px;
+    margin: 0;
+}
+.img-with-txt .txt h5{
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 200;
+    margin: 0;
+    margin-top: 16px;
+}
+.img-with-txt .txt h5 span{
+    font-family: 'Brittany Signature';
+    color: #E6D194;
+    font-size: 40px;
+    line-height: 54px;
+}
+.img-with-txt.big-picture .txt{
+    background: rgba(0,0,0,0.6);
+}
+.img-with-txt.curate .txt{
+    background: rgba(0,0,0,0.7);
+}
+.img-with-txt.big-picture .txt h5 span{
+    font-family:'AL_Nevrada_PersonalUseOnly';
+}
+.img-with-txt .txt a.btn-style {
+    background: rgba(0,0,0,0.2);
+    border: 1px solid #C6AC62;
+    color: #C6AC62 !important;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 17px 30px !important;
+    border-radius: 4px;
+    display: block;
+    margin-top: 25px;
+}
+.relationships {
+    padding: 130px 63px;
+    text-align: center;
+}
+.relationships .title{
+    margin-bottom: 37px;
+}
+.relationships .title h2{
+    font-size: 52px;
+    line-height: 63px;
+    text-transform: uppercase;
+    font-weight: 200;
+    color: #fff;
+    letter-spacing: 2px;
+}
+.relationships .title h2 span{
+    display: inline-block;
+    background: linear-gradient(90deg, #FDDC76 0%, #F8F0CB 49.02%, #FEDD76 100%),linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+}
+.relationships .title p{
+    font-size: 16px;
+    line-height: 33px;
+    color: #fff;
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+.relationships .row > div{
+    padding: 0 7px;
+}
+.our-expertise .title h2{
+    text-align: center;
+    color: #E6D194;
+    padding: 64px 0px;
+    margin: 0;
+    font-family: 'Olivera';
+    font-size: 64px;
+    line-height: 61px;
+    letter-spacing: 2px;
+}
+.our-expertise .img img{
+    width: 100%;
+    height: 504px;
+    object-fit: cover;
+}
+.our-expertise .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px 50px;
+}
+.our-expertise .content h4{
+    font-size: 40px;
+    line-height: 38px;
+    color: #E6D194;
+    font-family: 'Olivera';
+    letter-spacing: 1px;
+}
+.our-expertise .content ul li{
+    font-size: 16px;
+    color: #fff;
+    line-height: 24px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+.slider {
+    padding: 0px 70px 70px;
+}
+.slider .title{
+    margin-bottom: 100px;
+}
+.slider .title h2{
+    font-size: 64px;
+    line-height: 60px;
+    color: #fff;
+    font-family: 'Olivera';
+    text-align: center;
+    letter-spacing: 2px;
+}
+.slider .title h2 span{
+    color: #E6D194;
+}
+.slider .title p{
+    font-size: 32px;
+    line-height: 48px;
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    font-weight: 200;
+}
+.slider_wrapper img{
+    width: 800px;
+    height: 400px;
+    border: 4px solid #E6D194;
+    object-fit: cover;
+}
+.slider_wrapper .slide-item.slick-slide{
+    transform: scale(0.8);
+    margin: 0 -50px;
+    position: relative;
+}
+.slider_wrapper .slide-item h5{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 15px 0px;
+    margin: 0;
+    font-size: 40px;
+    line-height: 40px;
+    color: #E6D194;
+    font-family: 'Olivera';
+    letter-spacing: 2px;
+}
+.slider_wrapper .slide-item.slick-slide.slick-active{
+    transform: scale(0.9);
+}
+.slider_wrapper .slide-item.slick-slide.slick-active.slick-center{
+    transform: scale(1);
+    position: relative;
+    z-index: 1;
+}
+.contact{
+    padding: 137px 85px;
+}
+.contact .contact-detail{
+    text-align: center;
+}
+.contact .contact-detail ul{
+    list-style: none;
+    padding: 0;
+}
+.contact .row{
+    padding: 0px 48px;
+}
+.contact-detail ul li{
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.48px;
+    margin-bottom: 16px;
+}
+.contact-detail .btn-style{
+    padding: 15px 55px;
+    border-radius: 4px;
+    border: 2px solid #E6D194;
+    background: #0D0D0D;
+    color: #E6D194;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 16px;
+    display: inline-block;
+}
+.footer{
+    padding: 125px 245px;
+    text-align: center;
+}
+.footer .footer-menu ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+.footer .footer-menu ul li a,
+.footer .copyright p{
+    color: #D0DAF5;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+.footer > .footer-logo{
+    display: none;
+}
+.recent_exp {
+    padding: 0px 50px 50px;
+}
+.recent_exp .title{
+    padding: 64px 0px;
+    margin-bottom: 36px;
+}
+.recent_exp .title h2{
+    margin: 0;
+    font-size: 64px;
+    text-align: center;
+    line-height: 64px;
+    color: #E6D194;
+    font-family: 'Olivera';
+    letter-spacing: 1px;
+}
+.recent_exp img{
+    height: 600px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 380px 380px 0 0;
+}
+.recent_exp p{
+    font-size: 80px;
+    line-height: 80px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    font-family: 'Brittany Signature';
+    color: #E6D194;
+    left: -150px;
+    z-index: 1;
+}
+.recent_exp .img.reverse p{
+    left: auto;
+    right: -150px;
+}
+.recent_exp .img{
+    position: relative;
+}
+.recent_exp .img:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 103px 103px 0px 0px;
+}
